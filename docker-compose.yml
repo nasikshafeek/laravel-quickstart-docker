@@ -57,7 +57,8 @@ services:
     mysql:
         container_name: project_mysql
         restart: always
-        image: mysql:latest
+        build:
+            context: docker-images/mysql
         volumes_from:
             - data
             - logs
