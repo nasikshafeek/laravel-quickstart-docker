@@ -68,33 +68,4 @@ services:
             MYSQL_USER: homestead
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: root
-    mysql_test:
-        container_name: project_mysql_test
-        restart: always
-        image: mysql
-        volumes_from:
-            - data_test
-        expose:
-            - "3306"
-        environment:
-            MYSQL_DATABASE: homestead_test
-            MYSQL_USER: homestead_test
-            MYSQL_PASSWORD: secret
-            MYSQL_ROOT_PASSWORD: root
-    mongo:
-        container_name: project_mongo
-        restart: always
-        image: mongo
-        expose:
-            - "27017"
-        volumes_from:
-            - data
-            - logs
-    redis:
-        container_name: project_redis
-        restart: always
-        image: redis
-        expose:
-            - "6379"
-        volumes_from:
-            - data
+            TZ: UTC
