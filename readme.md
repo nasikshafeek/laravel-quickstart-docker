@@ -1,15 +1,19 @@
 # Laravel Quickstart - Basic
 
-## Quck Installation
+## Quick Installation
 
-    git clone https://github.com/laravel/quickstart-basic quickstart
+    git@github.com:kisanme/laravel-quickstart-docker.git
 
-    cd quickstart
+    cd laravel-quickstart-docker
 
-    composer install
+    docker-compose up -d
+    
+    docker-compose exec workspace bash
 
     php artisan migrate
 
-    php artisan serve
+    php artisan cache:clear
+
+[Visit the site](http://localhost:8000)
 
 [Complete Tutorial](https://laravel.com/docs/5.2/quickstart)
