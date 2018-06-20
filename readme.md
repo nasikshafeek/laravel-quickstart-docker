@@ -9,6 +9,8 @@
     docker-compose up -d
     
     docker-compose exec workspace bash
+    
+    composer install
 
     php artisan migrate
 
